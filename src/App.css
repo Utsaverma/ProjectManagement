@@ -1,0 +1,165 @@
+.App {
+  text-align: center; 
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/**************************************************CSS Starts From Here****************************************/
+/* Header */
+.headerContainer{
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.header{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+/* Footer */
+.footerContainer{
+  background: black;
+  color: white;  
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;  
+}
+ul{
+  list-style-type: none;
+  margin-top: 10px;
+}
+li{
+  display: inline-block;
+  padding-left: 5%;
+}
+li:first-child{
+  padding-left: 0px;
+}
+li>a{
+  text-decoration: none;
+  color: white;
+}
+/* Login */
+@media all and (min-width: 480px) {
+  .Login {
+    padding: 60px 0;
+  }
+
+  .Login form {
+    margin: 0 auto;
+    max-width: 320px;
+  }
+}
+
+/* Update Task */
+button:focus{
+  outline: 0 !important;
+}
+.comments{
+  list-style-type: decimal;
+}
+.comments li{
+  display: list-item;
+  padding-left: 0px;
+}
+.addComment , .addTask, .addProject{
+  margin-left: 43%;
+  margin-top: 3%;
+}
+span.popUpData{
+  color: #007bff;
+  font-style: italic;
+}
+form button{
+  margin-top: 3%; 
+  border-radius: 30px !important;
+}
+form .btn-secondary{
+  margin-left: 1%;
+}
+.fa-refresh:hover{
+  color:grey;
+  cursor: pointer;
+}
+/* Role Router */
+.userName span{
+  font-weight: 500;
+}
+.userContainer{
+  float: right;
+  margin-right: 1%;
+}
+.logout:hover{
+  color: #007bff;
+}
+table{
+  font-size: 13px;
+  width: 95% !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+.roleMsg{
+  float: left;
+  margin-top: 3%;
+  margin-left: 3%;
+  font-weight: 500;
+}
+/* AddTask */
+.important{
+  color: red;
+}
+.note{
+  color: red;
+  font-size: 9px;
+  margin-left: 54%;
+  margin-top: 1%;
+}
+.modal-header .close {
+  margin: -1rem -1rem -1rem 0 !important;
+}
+/* Login */
+.loginForm{
+  max-width: 32% !important;
+  margin-top: 8% !important;
+}
+.loginHeader{
+  margin-top: 1.5%;
+}
+.marqueeMsg{
+  color: red;
+}

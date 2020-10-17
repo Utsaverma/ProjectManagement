@@ -1,0 +1,28 @@
+[
+    {
+        "managerEmpId":"001",
+        "projectId":"Proj1",
+        "projectName":"ProjectName1",
+        "status":"Active"
+    },
+    {
+        "managerEmpId":"001",
+        "projectId":"Proj2",
+        "projectName":"ProjectName2",
+        "status":"Active"
+    },
+    {
+        "managerEmpId":"001",
+        "projectId":"Proj3",
+        "projectName":"ProjectName3",
+        "status":"Inactive"
+    },
+    {
+        "managerEmpId":"004",
+        "projectId":"Proj4",
+        "projectName":"ProjectName4",
+        "status":"Active"
+    }
+    
+
+]

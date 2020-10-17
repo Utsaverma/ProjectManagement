@@ -1,0 +1,17 @@
+[
+    {
+        "projectId":"Proj1",
+        "empId":"002",
+        "managerEmpId":"001"
+    },
+    {
+        "projectId":"Proj1",
+        "empId":"003",
+        "managerEmpId":"001"
+    },
+    {
+        "projectId":"Proj2",
+        "empId":"004",
+        "managerEmpId":"004"
+    }
+]

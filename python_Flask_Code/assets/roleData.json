@@ -1,0 +1,14 @@
+[
+    {
+        "roleId":"1",
+        "role":"Project Manager"
+    },
+    {
+        "roleId":"2",
+        "role":"Technology Lead"
+    },
+    {
+        "roleId":"3",
+        "role":"Software Developer"
+    }
+]

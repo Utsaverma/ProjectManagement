@@ -1,0 +1,21 @@
+{
+    "basepath":"http://localhost:5000/",
+    "loginUrl":"validateUser",
+    "managerData":"projectsDetails/",
+    "leadData":"tasksDetails/",
+    "devData":"tasksDetails/",
+    "underProjects":"projectsMapped/",
+    "empList":"empList/",
+    "empListbelowManager":"empListBelowManager/",
+    "addProject":"addProject",
+    "addTask":"addTask",
+    "addComment":"addComment",
+    "loginDisp":"Use your organization provided credentials to login",
+    "serverIssue":"We are currently facing some Issue, Please retry in some diff",
+    "roleErr":"You don't hold a valid Role, Please Retry after sometime",
+    "defaultErr":"Something went wrong Please try after sometime!!",
+    "projectAdded":"Project Successfully Added",
+    "taskAdded":"Task Successfully Added",
+    "taskUpdated":"Comments Successfully added",
+    "projectExist":"The name you have choose for project is already present, Please try again with a diff name"
+}

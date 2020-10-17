@@ -1,0 +1,30 @@
+[
+    {
+        "name" : "Utsav Verma",
+        "emailId":"utsavverma@techno.com",
+        "pass":"Utsav1",
+        "empId":"001",
+        "roleId":"1"
+    },
+    {
+        "name" : "Ashish Gupta",
+        "emailId":"ashishgupta@techno.com",
+        "pass":"Ashish1",
+        "empId":"002",
+        "roleId":"2"
+    },
+    {
+        "name" : "Anand Bajpai",
+        "emailId":"anandbajpai@techno.com",
+        "pass":"Anand1",
+        "empId":"003",
+        "roleId":"3"
+    }, 
+    {
+        "name" : "Utsav Verma",
+        "emailId":"utsavverma1@techno.com",
+        "pass":"Utsav1",
+        "empId":"005",
+        "roleId":"1"
+    }
+]
