@@ -1,8 +1,9 @@
 import React from 'react';
-import {Table} from 'react-bootstrap';
+import {Table, Dropdown,DropdownButton} from 'react-bootstrap';
 import axios from 'axios';
 import Config from '../assets/config.json';
 import AddProjectPopup from './AddProjectPopup';
+import $ from 'jquery';
 
 class Manager extends React.Component {
   constructor(props){
@@ -37,6 +38,10 @@ class Manager extends React.Component {
     .catch(err=>{
       console.log(err)
     })
+  }
+
+  componentDidUpdate(){
+    $("#dropdown-item-button").removeClass("btn").removeClass("btn-primary");
   }
 
   getEmpDetails=(projectId)=>{
@@ -75,7 +80,19 @@ class Manager extends React.Component {
                   <td>{index+1}</td>
                   <td>{row["projectId"]}</td>
                   <td>{row["projectName"]}</td>
-                  <td onClick={()=>this.getEmpDetails(row["projectId"])}>{row["totalEmpForProject"]}</td>
+                  <td >
+                        {
+                          row["empList"].length!=0?
+                            <DropdownButton id="dropdown-item-button" title={row["totalEmpForProject"]}>
+                            {
+                              row["empList"].map((employee,index)=>{
+                                return <Dropdown.Item as="button" key={index}>{employee}</Dropdown.Item>
+                              })
+                            }
+                          </DropdownButton>:row["totalEmpForProject"]
+                        }
+                        
+                  </td>
                   <td>{row["status"]}</td>
                 </tr>
               }):<tr><td colSpan="5">No Project Under You</td></tr>

@@ -175,3 +175,21 @@ table{
 .error:hover{
   color: #007bff;
 }
+/* Manager */
+#dropdown-item-button{
+  border: 0px !important;
+  color: #007bff;
+  background-color: transparent;
+}
+#dropdown-item-button:after{
+  content: none !important;
+}
+.dropdown-menu.show{
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+.dropdown-item{
+  font-size: 12px;
+  color: #007bff !important;
+  font-weight: 600 !important;
+}

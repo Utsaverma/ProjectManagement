@@ -71,6 +71,7 @@ def project_under(empId):
     for project in project_manage_data_source:
         if project["managerEmpId"]==empId:
             project["totalEmpForProject"] = len([project_master for project_master in project_master_data_source if project_master["projectId"]==project["projectId"] and project_master["managerEmpId"]==project["managerEmpId"]])
+            project["empList"] = ["("+str(project_master["empId"])+"), "+get_empName(project_master["empId"]) for project_master in project_master_data_source if project_master["projectId"]==project["projectId"] and project_master["managerEmpId"]==project["managerEmpId"]]
             resp.append(project)
     return jsonify(resp)
     

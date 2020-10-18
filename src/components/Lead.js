@@ -1,8 +1,9 @@
 import React from 'react';
-import {Table} from 'react-bootstrap';
+import {Table,Dropdown,DropdownButton} from 'react-bootstrap';
 import axios from 'axios';
 import Config from '../assets/config.json';
 import AddTaskPopup from './AddTaskPopup';
+import $ from 'jquery'
 
 class Lead extends React.Component {
   // states for Class component
@@ -57,6 +58,10 @@ class Lead extends React.Component {
     })
   }
 
+  componentDidUpdate(){
+    $("#dropdown-item-button").removeClass("btn").removeClass("btn-primary");
+  }
+
   // to refresh screen data
   refreshData=()=>{
     axios.get(Config.basepath+Config.leadData+this.props.data["empId"])
@@ -87,7 +92,18 @@ class Lead extends React.Component {
               this.state.taskData.length!=0?this.state.taskData.map((row,index)=>{
                 return <tr key={index}>
                   <td>{index+1}</td>
-                  <td>{row["taskId"]}</td>
+                  <td>
+                    {
+                      row["commentsAdded"].length!=0?
+                        <DropdownButton id="dropdown-item-button" title={row["taskId"]}>
+                        {
+                          row["commentsAdded"].map((comment,index1)=>{
+                            return <Dropdown.Item as="button" key={index+index1}>{index1+1}.&nbsp;{comment}</Dropdown.Item>
+                          })
+                        }
+                      </DropdownButton>:row["taskId"]
+                    }     
+                  </td>
                   <td>{row["taskName"]}</td>
                   <td>({row["tiedToProj"]}),&nbsp;{row["projectName"]}</td>
                   <td>({row["taskAssigne"]}),&nbsp;{row["assigne"]}</td>
