@@ -1,0 +1,23 @@
+prerequisite
+1) Setup for React Application (https://reactjs.org/)
+2) Setup for Python Flask   (https://flask.palletsprojects.com/en/1.1.x/installation/#install-flask)
+
+3) Clone the repository in local
+4) Python code is present under "Python_Flask_Code" folder , execute the same form there,
+5) Flask code will be run on "http://localhost:5000/"
+6) To execute React App, run 
+    i) npm install
+    ii) npm start
+7) React runs on "http://localhost:3000/"
+8) For testing purpose use below email/password :
+    i) Project Manager, will be able to create project:
+        email: utsavverma@techno.com
+        password: Utsav1
+    ii) Technology Lead, will be able to create tasks for the projects:
+        email: ashishgupta@techno.com
+        password: Ashish1
+    iii) Software Developer, will be able to update comments for the tasks
+        email: anandbajpai@techno.com
+        password: Anand1
+9) We can add more records for testing purpose ,
+   to do the same go to "python_flask_code/assets" and update the corresponding json.

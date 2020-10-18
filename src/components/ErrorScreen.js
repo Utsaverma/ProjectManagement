@@ -5,7 +5,7 @@ class ErrorScreen extends React.Component {
         super(props);
     }
     render() {
-      return <div className="errorContainer">
+      return <div className="errorContainer" onClick={()=>window.location.reload()}>
                 <h1 className="error">{this.props.errMsg}</h1>
             </div>
     }

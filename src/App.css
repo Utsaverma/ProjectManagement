@@ -163,3 +163,15 @@ table{
 .marqueeMsg{
   color: red;
 }
+/* ErrorScreen */
+.errorContainer{
+  cursor:pointer
+}
+.error{
+  color: red;
+  margin-top: 15%;
+  font-size: 25px;
+}
+.error:hover{
+  color: #007bff;
+}

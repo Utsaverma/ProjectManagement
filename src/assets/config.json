@@ -17,5 +17,8 @@
     "projectAdded":"Project Successfully Added",
     "taskAdded":"Task Successfully Added",
     "taskUpdated":"Comments Successfully added",
-    "projectExist":"The name you have choose for project is already present, Please try again with a diff name"
+    "projectExist":"The name you have choose for project is already present, Please try again with a diff name",
+    "INVALID_EMAIL":"The email id used is invalid, Please use the one provided by the Organization",
+    "INVALID_PASS":"You have used a wrong password, Please try again",
+    "INVALID_ROLE":"As per the Organizations records, your's is not a valid role , Please check with Admin and retry"
 }

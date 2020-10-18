@@ -13,7 +13,8 @@ class Login extends React.Component {
             email: "",
             password:"",
             data:"",
-            error:""
+            error:"",
+            formSubmitted:false
         };
       }
     componentDidMount(){
@@ -41,7 +42,8 @@ class Login extends React.Component {
     // Handelling the login logic
     handleSubmit=(event)=> {
         event.preventDefault();
-        console.log(this.state.email,this.state.password);
+        this.setState({formSubmitted:true})
+        // console.log(this.state.email,this.state.password);
         let data = { 
             email:  this.state.email,
             pass:   window.btoa(this.state.password)
@@ -50,7 +52,7 @@ class Login extends React.Component {
             .then(response => {
                 console.log(response)
                 if(response.data=="INVALID_EMAIL" || response.data=="INVALID_PASS" || response.data=="INVALID_ROLE"){
-                    this.setState({error:response.data,data:{}})
+                    this.setState({error:Config[response.data],data:{}})
                 }
                 else{
                     this.setState({error:"",data:response.data})
@@ -76,7 +78,7 @@ class Login extends React.Component {
     
     render() {
       return <React.Fragment>
-            {!this.state.data?<div className="Login">
+            {!this.state.formSubmitted?<div className="Login">
                 {
                    this.state.serverUp?
                         <React.Fragment>
@@ -115,12 +117,12 @@ class Login extends React.Component {
                                 Reset
                                 </Button>
                             </form>
-                            {this.state.error=="" && this.state.data !=""?null:<ErrorScreen errMsg={this.state.error}/>}
+
                         </React.Fragment>
                         
                     :<ErrorScreen errMsg={Config.serverIssue}/>
                 }
-            </div>:<RoleRouter data={this.state.data}/>}
+            </div>:this.state.error!="" && Object.keys(this.state.data).length ==0?<ErrorScreen errMsg={this.state.error}/>:<RoleRouter data={this.state.data}/>}
             </React.Fragment>
     }
   }
